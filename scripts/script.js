@@ -24,25 +24,25 @@ function goToTicket() {
 function selectCell(cell) {
     const supertext = document.getElementById("sup")
     const freeS = document.getElementById("freeSeat")
-   // console.log(supertext)
-    // Check if the cell is selected or not
-    // if (cell.classList.contains('selected')) {
-    //     // Decrease the value of t
-    //     t--;
-    //     m = 0;
-    //     total_free_seat = 40-t;
+   //console.log(supertext)
+    //Check if the cell is selected or not
+    if (cell.classList.contains('selected')) {
+        // Decrease the value of t
+        // t--;
+        // m = 0;
+        // total_free_seat = 40-t;
         
-    //     supertext.textContent = t;
-    //     freeS.textContent = total_free_seat;
+        // supertext.textContent = t;
+        // freeS.textContent = total_free_seat;
         
-    //     // Remove the 'selected' class
-    //     cell.classList.remove('selected');
-    //     //console.log(t);
-    //     cell.style.backgroundColor = '#F7F8F8';
-    //     cell.style.color = 'black'
+        // // Remove the 'selected' class
+        // cell.classList.remove('selected');
+        // //console.log(t);
+        // cell.style.backgroundColor = '#F7F8F8';
+        // cell.style.color = 'black'
 
 
-    // } else {
+    } else {
         // Increase the value of t
         if(t< 4){
             t++;
@@ -75,7 +75,7 @@ function selectCell(cell) {
     }
 
     
-
+}
 
 
 const inputFields = document.querySelectorAll('input[type="text"], input[type="number"], input[type="email"]');
