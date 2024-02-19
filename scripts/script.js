@@ -64,6 +64,11 @@ function selectCell(cell) {
             //alert("You can not select more than 4 seats!");
            alert_btn();
         }
+
+        if (t === 4) {
+            const button = document.getElementById('applyC');
+            button.removeAttribute('disabled');
+        }
         
     }
 
@@ -165,13 +170,15 @@ const input = document.getElementById('cupon')
 const discLabel = document.getElementById('disc');
 const dscAm = document.getElementById('discAmount');
 
+const div = document.getElementById('removeNeed');
+  
 button.addEventListener('click', function() {
     const coupon = input.value.trim().toUpperCase();
     let discount = 0;
   
     if (coupon === 'NEW15') {
       discount = grandT(1);
-    } else if (coupon === 'COUPLE20') {
+    } else if (coupon === 'COUPLE 20') {
       discount = grandT(2);
     } else {
       alert('Invalid Coupon');
@@ -181,4 +188,6 @@ button.addEventListener('click', function() {
     discLabel.textContent = 'Discount';
     dscAm.textContent = `BDT ${x}`;
    // resultDiv.textContent = `Discount: ${x}%`;
+//    div.style.visibility = 'hidden';
+    div.classList.add('hidden');
   });
