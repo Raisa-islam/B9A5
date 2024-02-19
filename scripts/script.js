@@ -60,7 +60,10 @@ function selectCell(cell) {
             m=1;
             freeS.textContent = total_free_seat;
             cell.style.backgroundColor = '#1DD100';
-            cell.style.color = 'white'
+            cell.style.color = 'white';
+            const value1 = inputField1.value.trim();
+            const value2 = inputField2.value.trim();
+            submitButton.disabled = !(value1 && value2);
         }
         else{
             //alert("You can not select more than 4 seats!");
@@ -71,6 +74,7 @@ function selectCell(cell) {
             const button = document.getElementById('applyC');
             button.removeAttribute('disabled');
         }
+        
         
     }
 
