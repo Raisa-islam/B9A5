@@ -19,11 +19,16 @@ function goToTicket() {
 
 
 function selectCell(cell) {
+    const supertext = document.getElementById("sup")
+   // console.log(supertext)
     // Check if the cell is selected or not
     if (cell.classList.contains('selected')) {
         // Decrease the value of t
         t--;
         m = 0;
+        
+        supertext.textContent = t;
+        
         // Remove the 'selected' class
         cell.classList.remove('selected');
         console.log(t);
@@ -32,6 +37,9 @@ function selectCell(cell) {
         t++;
         // Add the 'selected' class
         cell.classList.add('selected');
+        
+        supertext.textContent = t;
+        
         console.log(t);
         m=1;
     }
@@ -41,3 +49,18 @@ function selectCell(cell) {
 
 }
 
+const inputFields = document.querySelectorAll('input[type="text"], input[type="number"], input[type="email"]');
+
+inputFields.forEach(field => {
+  field.style.border = '1px solid #ccc';
+  field.style.borderRadius = '12px';
+  field.style.width = '430px';
+  field.style.height = '60px';
+  field.style.padding = '10px';
+});
+
+const links = document.querySelectorAll('.links a');
+
+links.forEach(link => {
+  link.style.textDecoration = 'underline';
+});
