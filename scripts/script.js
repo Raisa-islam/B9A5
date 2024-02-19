@@ -74,7 +74,7 @@ function selectCell(cell) {
             const button = document.getElementById('applyC');
             button.removeAttribute('disabled');
         }
-        
+
         
     }
 
@@ -184,8 +184,10 @@ button.addEventListener('click', function() {
   
     if (coupon === 'NEW15') {
       discount = grandT(1);
+      div.classList.add('hidden');
     } else if (coupon === 'COUPLE 20') {
       discount = grandT(2);
+      div.classList.add('hidden');
     } else {
       alert('Invalid Coupon');
     }
@@ -195,7 +197,7 @@ button.addEventListener('click', function() {
     dscAm.textContent = `BDT ${x}`;
    // resultDiv.textContent = `Discount: ${x}%`;
 //    div.style.visibility = 'hidden';
-    div.classList.add('hidden');
+    
   });
 
 
