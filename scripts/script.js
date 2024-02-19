@@ -26,22 +26,23 @@ function selectCell(cell) {
     const freeS = document.getElementById("freeSeat")
    // console.log(supertext)
     // Check if the cell is selected or not
-    if (cell.classList.contains('selected')) {
-        // Decrease the value of t
-        t--;
-        m = 0;
-        total_free_seat = 40-t;
+    // if (cell.classList.contains('selected')) {
+    //     // Decrease the value of t
+    //     t--;
+    //     m = 0;
+    //     total_free_seat = 40-t;
         
-        supertext.textContent = t;
-        freeS.textContent = total_free_seat;
+    //     supertext.textContent = t;
+    //     freeS.textContent = total_free_seat;
         
-        // Remove the 'selected' class
-        cell.classList.remove('selected');
-        //console.log(t);
-        cell.style.backgroundColor = '#F7F8F8';
+    //     // Remove the 'selected' class
+    //     cell.classList.remove('selected');
+    //     //console.log(t);
+    //     cell.style.backgroundColor = '#F7F8F8';
+    //     cell.style.color = 'black'
 
 
-    } else {
+    // } else {
         // Increase the value of t
         if(t< 4){
             t++;
@@ -58,7 +59,8 @@ function selectCell(cell) {
             grandT(0);
             m=1;
             freeS.textContent = total_free_seat;
-            cell.style.backgroundColor = 'blue';
+            cell.style.backgroundColor = '#1DD100';
+            cell.style.color = 'white'
         }
         else{
             //alert("You can not select more than 4 seats!");
@@ -74,7 +76,7 @@ function selectCell(cell) {
 
     
 
-}
+
 
 const inputFields = document.querySelectorAll('input[type="text"], input[type="number"], input[type="email"]');
 
@@ -191,3 +193,10 @@ button.addEventListener('click', function() {
 //    div.style.visibility = 'hidden';
     div.classList.add('hidden');
   });
+
+
+const next = document.getElementById('submit-button');
+
+next.addEventListener('click', function(event) {
+    
+});
